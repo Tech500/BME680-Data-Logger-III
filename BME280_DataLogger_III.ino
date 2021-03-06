@@ -6,9 +6,9 @@
  * Original code from Rui Santos
  * Project Details https://RandomNerdTutorials.com
  * *
- * *    Robert Gillespie's  "OLED_BME680.odt"  --bases of modified code
+ * *    
  * *
- * *    BME680_DataLogger_Webserver.ino modifion code 3/3/2021 William Lucid's
+ * *   Enter yout Network credentials and enter your "ThingSpeak.com" myChannelNumber and myWriteApiKey.
  *
  */
 
@@ -35,8 +35,8 @@
 String linkAddress = "http://10.0.0.110:8060";  //LAN --privateIP and PORT for URL link
 
 // Replace with your network details
-const char* ssid = "R2D2";
-const char* password = "sissy4357";
+const char* ssid = "yourSSID";
+const char* password = "yourPASSWORD";
 
 //AsyncWebServer
 AsyncWebServer serverAsync(8060);
@@ -206,10 +206,10 @@ void wifi_Start()
      Field 8 - Gas Resistance KOhms
 */
 
-//Graphing requires "FREE" "ThingSpeak.com" account..
+//Graphing requires "FREE" "ThingSpeak.com" account..////////////////////////////////////////////
 //Enter "ThingSpeak.com" data here....
-unsigned long myChannelNumber = 1320323;
-const char * myWriteAPIKey = "95NA12W3LS7IOE65";
+unsigned long myChannelNumber = yourChannelNumber;
+const char * myWriteAPIKey = "yourWriteAPIKey";
 
 
 void setup()
